@@ -52,11 +52,15 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <pre>{choice?.verse}</pre>
+      <div className="Content">
+        <p>{choice?.verse}</p>
         {hidden || <h1>{choice?.key}</h1>}
-        <button onClick={() => setHidden(false)}>Reveal</button>
-      </header>
+
+        {hidden
+          ? <button className="Reveal" onClick={() => setHidden(false)}>Reveal</button>
+          : <button className="Try-Again" onClick={()=>window.location.reload()}>Try Again</button>
+        }
+      </div>
     </div>
   );
 }
