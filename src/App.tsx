@@ -62,14 +62,14 @@ const Chooser = ({ onChoose }: { onChoose: (choice: Choice) => void }) => {
 const RealReveal = () => (
   <div>
     <h1>Real</h1>
-    <img src="real.jpg" alt="buddy christ"></img>
+    <img src="real.jpg" alt="buddy christ" className="Real"></img>
   </div>
 )
 
 const FakeReveal = () => (
   <div>
     <h1>Fake</h1>
-    <img src="fake.jpg" alt="the charletan"></img>
+    <img src="fake.jpg" alt="the charletan" className="Fake"></img>
   </div>
 )
 

@@ -27,6 +27,11 @@ html, body, #root {
 img {
   margin-bottom: 2em;
   border-radius: 10px;
+  max-height: 25vh;
+}
+
+img.Fake {
+  transform: rotate(-90deg);
 }
 
 button.Real {
