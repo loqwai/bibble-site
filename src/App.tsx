@@ -6,7 +6,7 @@ const useData = () => {
 
   React.useEffect(() => {
     async function fetchData() {
-      const res = await fetch('/data.json')
+      const res = await fetch('data.json')
       setData(await res.json())
     }
 
