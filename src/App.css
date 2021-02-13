@@ -30,10 +30,6 @@ img {
   max-height: 25vh;
 }
 
-img.Fake {
-  transform: rotate(-90deg);
-}
-
 button.Real {
   border: none;
   border-radius: 10px;
