@@ -52,10 +52,26 @@ const useRandomVerse = ():[Verse | undefined, () => void] => {
   return [verse, reset]
 }
 
-const Chooser = ({ onChoose }: { onChoose: (choice: Choice) => void }) => {
+type Answer = 'fake' | 'real'
+
+interface Guess {
+  verse: string;
+  answer: Answer;
+}
+
+const storeGuess = async (guess: Guess) => {
+  await fetch('https://bibble-worker.loqwai.workers.dev/guesses', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(guess),
+  })
+}
+
+
+const Chooser = ({ onAnswer }: { onAnswer: (answer: Answer) => void }) => {
   return (<>
-    <button className="Real" onClick={() => onChoose('real_verses')}>Real</button>
-    <button className="Fake" onClick={() => onChoose('fake_verses')}>Fake</button>
+    <button className="Real" onClick={() => onAnswer('real')}>Real</button>
+    <button className="Fake" onClick={() => onAnswer('fake')}>Fake</button>
   </>);
 }
 
@@ -87,7 +103,13 @@ function App() {
     resetVerse();
   }
 
+
   if (!verse) return null
+
+  const onAnswer = async (answer: Answer) => {
+    setHidden(false)
+    await storeGuess({ verse: verse?.text, answer })
+  }
 
   return (
     <div className="App">
@@ -96,7 +118,7 @@ function App() {
         {hidden || appleSauce[verse.key]}
 
         {hidden
-          ? <Chooser onChoose={() => setHidden(false)} />
+          ? <Chooser onAnswer={onAnswer} />
           : <button className="Try-Again" onClick={reset}>Try Again</button>
         }
       </div>
