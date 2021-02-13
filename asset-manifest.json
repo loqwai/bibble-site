@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/bibble-site/static/css/main.ab7136cd.chunk.css",
-    "main.js": "/bibble-site/static/js/main.4fa4b843.chunk.js",
-    "main.js.map": "/bibble-site/static/js/main.4fa4b843.chunk.js.map",
+    "main.css": "/bibble-site/static/css/main.6a085052.chunk.css",
+    "main.js": "/bibble-site/static/js/main.792d77c1.chunk.js",
+    "main.js.map": "/bibble-site/static/js/main.792d77c1.chunk.js.map",
     "runtime-main.js": "/bibble-site/static/js/runtime-main.238cc1fe.js",
     "runtime-main.js.map": "/bibble-site/static/js/runtime-main.238cc1fe.js.map",
-    "static/js/2.1ab3c2d8.chunk.js": "/bibble-site/static/js/2.1ab3c2d8.chunk.js",
-    "static/js/2.1ab3c2d8.chunk.js.map": "/bibble-site/static/js/2.1ab3c2d8.chunk.js.map",
+    "static/js/2.38401625.chunk.js": "/bibble-site/static/js/2.38401625.chunk.js",
+    "static/js/2.38401625.chunk.js.map": "/bibble-site/static/js/2.38401625.chunk.js.map",
     "static/js/3.efcb6f50.chunk.js": "/bibble-site/static/js/3.efcb6f50.chunk.js",
     "static/js/3.efcb6f50.chunk.js.map": "/bibble-site/static/js/3.efcb6f50.chunk.js.map",
     "index.html": "/bibble-site/index.html",
-    "static/css/main.ab7136cd.chunk.css.map": "/bibble-site/static/css/main.ab7136cd.chunk.css.map",
-    "static/js/2.1ab3c2d8.chunk.js.LICENSE.txt": "/bibble-site/static/js/2.1ab3c2d8.chunk.js.LICENSE.txt"
+    "static/css/main.6a085052.chunk.css.map": "/bibble-site/static/css/main.6a085052.chunk.css.map",
+    "static/js/2.38401625.chunk.js.LICENSE.txt": "/bibble-site/static/js/2.38401625.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.238cc1fe.js",
-    "static/js/2.1ab3c2d8.chunk.js",
-    "static/css/main.ab7136cd.chunk.css",
-    "static/js/main.4fa4b843.chunk.js"
+    "static/js/2.38401625.chunk.js",
+    "static/css/main.6a085052.chunk.css",
+    "static/js/main.792d77c1.chunk.js"
   ]
 }
