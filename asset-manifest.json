@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/bibble-site/static/css/main.10fa66d0.chunk.css",
-    "main.js": "/bibble-site/static/js/main.83ffc82b.chunk.js",
-    "main.js.map": "/bibble-site/static/js/main.83ffc82b.chunk.js.map",
+    "main.js": "/bibble-site/static/js/main.63ed1e79.chunk.js",
+    "main.js.map": "/bibble-site/static/js/main.63ed1e79.chunk.js.map",
     "runtime-main.js": "/bibble-site/static/js/runtime-main.238cc1fe.js",
     "runtime-main.js.map": "/bibble-site/static/js/runtime-main.238cc1fe.js.map",
     "static/js/2.f13e0acb.chunk.js": "/bibble-site/static/js/2.f13e0acb.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.238cc1fe.js",
     "static/js/2.f13e0acb.chunk.js",
     "static/css/main.10fa66d0.chunk.css",
-    "static/js/main.83ffc82b.chunk.js"
+    "static/js/main.63ed1e79.chunk.js"
   ]
 }
