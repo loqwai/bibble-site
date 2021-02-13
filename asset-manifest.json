@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/bibble-site/static/css/main.0b283585.chunk.css",
-    "main.js": "/bibble-site/static/js/main.3a519a3a.chunk.js",
-    "main.js.map": "/bibble-site/static/js/main.3a519a3a.chunk.js.map",
+    "main.css": "/bibble-site/static/css/main.cc3efdd5.chunk.css",
+    "main.js": "/bibble-site/static/js/main.2c20d545.chunk.js",
+    "main.js.map": "/bibble-site/static/js/main.2c20d545.chunk.js.map",
     "runtime-main.js": "/bibble-site/static/js/runtime-main.238cc1fe.js",
     "runtime-main.js.map": "/bibble-site/static/js/runtime-main.238cc1fe.js.map",
     "static/js/2.1a1b3d8e.chunk.js": "/bibble-site/static/js/2.1a1b3d8e.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.efcb6f50.chunk.js": "/bibble-site/static/js/3.efcb6f50.chunk.js",
     "static/js/3.efcb6f50.chunk.js.map": "/bibble-site/static/js/3.efcb6f50.chunk.js.map",
     "index.html": "/bibble-site/index.html",
-    "static/css/main.0b283585.chunk.css.map": "/bibble-site/static/css/main.0b283585.chunk.css.map",
+    "static/css/main.cc3efdd5.chunk.css.map": "/bibble-site/static/css/main.cc3efdd5.chunk.css.map",
     "static/js/2.1a1b3d8e.chunk.js.LICENSE.txt": "/bibble-site/static/js/2.1a1b3d8e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.238cc1fe.js",
     "static/js/2.1a1b3d8e.chunk.js",
-    "static/css/main.0b283585.chunk.css",
-    "static/js/main.3a519a3a.chunk.js"
+    "static/css/main.cc3efdd5.chunk.css",
+    "static/js/main.2c20d545.chunk.js"
   ]
 }
