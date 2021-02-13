@@ -20,6 +20,15 @@ html, body, #root {
   text-align: center;
 }
 
+.App .Content p {
+  font-size: 1.5em;
+}
+
+img {
+  margin-bottom: 1em;
+  border-radius: 10px;
+}
+
 button.Real {
   border: none;
   border-radius: 10px;
@@ -28,6 +37,11 @@ button.Real {
   color: white;
   padding: 0.3em;
   margin: 0.3em;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.1)
 }
 
 button.Fake {
@@ -38,14 +52,15 @@ button.Fake {
   color: white;
   padding: 0.3em;
   margin: 0.3em;
+  cursor: pointer;
 }
 
 button.Try-Again {
-
   border: none;
   border-radius: 10px;
   background-color: #294D4A;
   font-size: 3em;
   color: white;
   padding: 0.3em;
+  cursor: pointer;
 }

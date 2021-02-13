@@ -28,21 +28,28 @@ const sample = <T extends any>(items: T[]): T => {
   return items[index]
 }
 
+interface Verse {
+  key: Choice;
+  text: string;
+}
 
-const useRandomVerse = () => {
-  const [verse, setVerse] = React.useState<{key: Choice, text: string}>()
+const useRandomVerse = ():[Verse | undefined, () => void] => {
+  const [verse, setVerse] = React.useState<Verse>()
   const data = useData()
+
+  const reset = () => setVerse(undefined)
 
   React.useEffect(() => {
     if (!data) return;
+    if (verse) return;
 
     const key = sample<Choice>(['real_verses', 'fake_verses'])
-    const verse = sample(data[key])
+    const text = sample(data[key])
 
-    setVerse({key, text: verse})
-  }, [data])
+    setVerse({key, text})
+  }, [data, verse])
 
-  return verse
+  return [verse, reset]
 }
 
 const Chooser = ({ onChoose }: { onChoose: (choice: Choice) => void }) => {
@@ -52,14 +59,33 @@ const Chooser = ({ onChoose }: { onChoose: (choice: Choice) => void }) => {
   </>);
 }
 
-const appleSauce: {[key in Choice]: string} =  {
-  real_verses: 'Real',
-  fake_verses: 'Fake',
+const RealReveal = () => (
+  <div>
+    <h1>Real</h1>
+    <img src="real.jpg" alt="buddy christ"></img>
+  </div>
+)
+
+const FakeReveal = () => (
+  <div>
+    <h1>Fake</h1>
+    <img src="fake.jpg" alt="the charletan"></img>
+  </div>
+)
+
+const appleSauce: {[key in Choice]: JSX.Element} =  {
+  real_verses: <RealReveal />,
+  fake_verses: <FakeReveal />,
 }
 
 function App() {
-  const verse = useRandomVerse()
+  const [verse, resetVerse] = useRandomVerse()
   const [hidden, setHidden] = React.useState(true)
+
+  const reset = () => {
+    setHidden(true)
+    resetVerse();
+  }
 
   if (!verse) return null
 
@@ -67,11 +93,11 @@ function App() {
     <div className="App">
       <div className="Content">
         <p>{verse.text}</p>
-        {hidden || <h1>{appleSauce[verse.key]}</h1>}
+        {hidden || appleSauce[verse.key]}
 
         {hidden
           ? <Chooser onChoose={() => setHidden(false)} />
-          : <button className="Try-Again" onClick={()=> window.location.reload()}>Try Again</button>
+          : <button className="Try-Again" onClick={reset}>Try Again</button>
         }
       </div>
     </div>
