@@ -57,6 +57,7 @@ type Answer = 'fake' | 'real'
 interface Guess {
   verse: string;
   answer: Answer;
+  correctAnswer: Answer;
 }
 
 const storeGuess = async (guess: Guess) => {
@@ -108,7 +109,10 @@ function App() {
 
   const onAnswer = async (answer: Answer) => {
     setHidden(false)
-    await storeGuess({ verse: verse?.text, answer })
+
+    const correctAnswer = verse.key === 'fake_verses' ? 'fake' : 'real'
+
+    await storeGuess({ verse: verse.text, answer, correctAnswer })
   }
 
   return (
