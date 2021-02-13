@@ -20,20 +20,31 @@ html, body, #root {
   text-align: center;
 }
 
-button.Reveal {
+button.Real {
   border: none;
   border-radius: 10px;
   background-color: #445552;
   font-size: 3em;
   color: white;
   padding: 0.3em;
+  margin: 0.3em;
+}
+
+button.Fake {
+  border: none;
+  border-radius: 10px;
+  background-color: #776472;
+  font-size: 3em;
+  color: white;
+  padding: 0.3em;
+  margin: 0.3em;
 }
 
 button.Try-Again {
 
   border: none;
   border-radius: 10px;
-  background-color: #776472;
+  background-color: #294D4A;
   font-size: 3em;
   color: white;
   padding: 0.3em;

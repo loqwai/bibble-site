@@ -1,12 +1,11 @@
-import { stringify } from 'querystring';
 import React from 'react';
 import './App.css';
 
 
-type Type = 'real_verses' | 'fake_verses'
+type Choice = 'real_verses' | 'fake_verses'
 
 type Data = {
-  [type in Type]: string[];
+  [choice in Choice]: string[];
 };
 
 const useData = () => {
@@ -23,42 +22,56 @@ const useData = () => {
 
   return data
 }
-//const foo = <T, >(x: T) => x;
-const randomChoice = <T extends any>(items: T[]): T => {
+
+const sample = <T extends any>(items: T[]): T => {
   const index = Math.floor(Math.random() * items.length)
   return items[index]
 }
 
 
-const useRandomChoice = () => {
-  const [choice, setChoice] = React.useState<{key: string, verse: string}>()
+const useRandomVerse = () => {
+  const [verse, setVerse] = React.useState<{key: Choice, text: string}>()
   const data = useData()
 
   React.useEffect(() => {
     if (!data) return;
 
-    const key = randomChoice<Type>(['real_verses', 'fake_verses'])
-    const verse = randomChoice(data[key])
+    const key = sample<Choice>(['real_verses', 'fake_verses'])
+    const verse = sample(data[key])
 
-    setChoice({key, verse})
+    setVerse({key, text: verse})
   }, [data])
 
-  return choice
+  return verse
+}
+
+const Chooser = ({ onChoose }: { onChoose: (choice: Choice) => void }) => {
+  return (<>
+    <button className="Real" onClick={() => onChoose('real_verses')}>Real</button>
+    <button className="Fake" onClick={() => onChoose('fake_verses')}>Fake</button>
+  </>);
+}
+
+const appleSauce: {[key in Choice]: string} =  {
+  real_verses: 'Real',
+  fake_verses: 'Fake',
 }
 
 function App() {
-  const choice = useRandomChoice()
+  const verse = useRandomVerse()
   const [hidden, setHidden] = React.useState(true)
+
+  if (!verse) return null
 
   return (
     <div className="App">
       <div className="Content">
-        <p>{choice?.verse}</p>
-        {hidden || <h1>{choice?.key}</h1>}
+        <p>{verse.text}</p>
+        {hidden || <h1>{appleSauce[verse.key]}</h1>}
 
         {hidden
-          ? <button className="Reveal" onClick={() => setHidden(false)}>Reveal</button>
-          : <button className="Try-Again" onClick={()=>window.location.reload()}>Try Again</button>
+          ? <Chooser onChoose={() => setHidden(false)} />
+          : <button className="Try-Again" onClick={()=> window.location.reload()}>Try Again</button>
         }
       </div>
     </div>
