@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bibble-site/static/css/main.10fa66d0.chunk.css",
+    "main.css": "/bibble-site/static/css/main.1af0aa22.chunk.css",
     "main.js": "/bibble-site/static/js/main.63ed1e79.chunk.js",
     "main.js.map": "/bibble-site/static/js/main.63ed1e79.chunk.js.map",
     "runtime-main.js": "/bibble-site/static/js/runtime-main.238cc1fe.js",
@@ -10,13 +10,13 @@
     "static/js/3.efcb6f50.chunk.js": "/bibble-site/static/js/3.efcb6f50.chunk.js",
     "static/js/3.efcb6f50.chunk.js.map": "/bibble-site/static/js/3.efcb6f50.chunk.js.map",
     "index.html": "/bibble-site/index.html",
-    "static/css/main.10fa66d0.chunk.css.map": "/bibble-site/static/css/main.10fa66d0.chunk.css.map",
+    "static/css/main.1af0aa22.chunk.css.map": "/bibble-site/static/css/main.1af0aa22.chunk.css.map",
     "static/js/2.f13e0acb.chunk.js.LICENSE.txt": "/bibble-site/static/js/2.f13e0acb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.238cc1fe.js",
     "static/js/2.f13e0acb.chunk.js",
-    "static/css/main.10fa66d0.chunk.css",
+    "static/css/main.1af0aa22.chunk.css",
     "static/js/main.63ed1e79.chunk.js"
   ]
 }
